@@ -1,5 +1,3 @@
-![Screenshot from 2023-12-14 18-44-59](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/672d9f8b-81de-44c5-9d02-c1465776496a)# Web Design for a Software Product Company
-
 ## AIM:
 
 To design a static website for a software product company company.
