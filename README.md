@@ -33,297 +33,1209 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 ## PROGRAM :
-### home.html
-```HTML
+### Home.html
+```
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>EduSoft Private Limited</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeConnections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
 
-  <body>
-    <div class="container">
-      <div class="banner">DailyObjects Limited.</div>
-      <div class="menu">
-        <div class="menuitemselected"><a href="/static/home.html">Home</a></div>
-        <div class="menuitem"><a href="/static/products.html">Products</a></div>
-        <div class="menuitem"><a>People</a></div>
-        <div class="menuitem"><a>Contact Us</a></div>
-      </div>
-      <div class="content">
-        <div class="homecontent">
-          <h1>About Us</h1>
-          <img src="./img/building.png" alt="Building" />
-          <div class="contenttext">
-            At Tally, we believe in the power of technology to make business
-            owners efficient, empowered and happier, so they can focus on what
-            matters most for their business. We design our products to focus on
-            just that to make our products work for you, and not the other way
-            around.
-            <br />
-            Our new product TallyPrime takes this to a new level, making your
-            start to automation, or your switch to Tally simpler than ever
-            before. You can now discover the product much more easily and make
-            the product do more for you, without learning anything new. There is
-            greater flexibility as the product adapts to your business and your
-            way of working. And the transformed look and feel will only make you
-            love the product even more.
-            <ul>
-              <li>Simple to learn, easier to use</li>
-              <li>Insightful , actionable & customizable reports</li>
-              <li>Anywhere, anytime and secure access</li>
-            </ul>
-          </div>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">CodeConnections<span>.</span></a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#products">products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
         </div>
-      </div>
-      <div class="footer">
-        Copyright &#169; 2021 DailyObjects Private Limited, Developed by Nijeesh NJ.
-      </div>
+    </header>
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>CodeConnections</h3>
+        <span>power yourself</span>
+        <p>Choose from over 210,000 online video courses with new additions published every month</p>
+        <a href="#" class="btn">Purchase Now</a>
     </div>
+</section>
   </body>
 </html>
 
 ```
-### product.html
-```HTML
+### Home.css
+```
+:root{
+    --pink : #e84393;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma , sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden ;
+    background: url(pawel-czerwinski-LS0CWcXo1dw-unsplash.jpg);
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center ;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background : rgba(255, 51, 153, .05);
+
+}
+
+.heading span{
+    color: var(--pink);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: var(--pink);
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header .icons a{
+    font-size: 2.5rem ;
+    color: #333;
+    margin-left: 1.5rem;
+
+}
+
+header .icons a:hover{
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url() no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.home  .content h3{
+
+    font-size: 6rem;
+    color: #333;
+    text-align: left;
+}
+
+.home  .content span{
+    font-size: 50 rem;
+    color: var(--pink);
+    padding: rem 0;
+    line-height: 1.5;
+}
+
+.home  .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+```
+### About.html
+```
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>DailyObjects</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
-
   <body>
-    <div class="container">
-      <div class="banner"><b>DailyObjects LIMITED.</b></div>
-      <div class="menu">
-        <div class="menuitem"><a href="/static/home.html">Home</a></div>
-        <div class="menuitemselected">
-          <a href="/static/products.html">Products</a>
+   <section class="about" id="about">
+    <h1 class="heading"> <span> about </span> us </h1>
+
+<div class="row">
+    <div class="video-container">
+          <video src="The Power of Computer Science.mp4" loop autoplay muted></video>
+          <h3>CodeConnections</h3>
+     </div>
+<div class="content">
+<h3 class=>why choose us?</h3>
+<p>We help organizations of all types and sizes prepare for the path ahead — wherever it leads. Our curated collection of business and technical courses help companies, governments, and nonprofits go further by placing learning at the center of their strategies.</p>
+<a href="#" class="btn">learn more</a>
+</div>
+
+</div>
+</section>
+
+
+<section class="icons-container">
+    <div class="icons">
+        <img src="work wth us.png" alt="">
+        <div class="info">
+            <h3>Work with us</h3>
+            <span>we’re all learners and instructors. We live out our values every day to create a culture that is diverse, inclusive, and committed to helping employees thrive.</span>
         </div>
-        <div class="menuitemselected"><a href="/static/people.html"><b>People</b></a></div>
-        <div class="menuitem"><a href="/static/contact.html"><b>Contact Us</b></a></div>
-      </div>
-      <div class="content">
-        <div class="productcontent">    
-          <h1>Our Premium Products</h1>
-          <div class="productitems">
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/tally_gold.png" alt="product image">
-                  </div>
-                  <div class="itemname">Tally Gold</div>
-                  <div class="itemprice">Price: Rs.40,000.00 </div>
-              </div>
-              <div class="productitem"> 
-                  <div class="itemimage">
-                  <img src="/static/img/tally_silver.png"  alt="product image">
-                  </div>
-                  <div class="itemname">Tally Silver</div>
-                  <div class="itemprice">Price: Rs.10,000.00 </div>
-              </div>
-              <div class="productitem"> 
-                <div class="itemimage">
-                <img src="/static/img/battlecreek-coffee-roasters-rsnzc-8dVacs0-unsplash.jpg"  alt="product image">
+    </div>
+
+    <div class="icons">
+        <img src="research.png" alt="">
+        <div class="info">
+            <h3>See our research</h3>
+            <span>We’re committed to improving lives through learning. Dig into our original research to learn about the forces that are shaping the modern workplace.</span>
+        </div>
+    </div>
+    
+    <div class="icons">
+        <img src="read-our-blog.jpg" alt="">
+        <div class="info">
+            <h3>Read our blog</h3>
+            <span>Want to know what we’ve been up to lately? Check out the CodeConnections blog to get the scoop on the latest news, ideas and projects, and more.</span>
+        </div>
+    </div>
+</section>
+  </body>
+</html>
+```
+### About.css
+```
+.about .row{
+    display:flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video-container h3{
+    position: absolute; 
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    color: white;
+    opacity: 50%;
+    background: none;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: right; 
+    mix-blend-mode: screen;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+
+
+.about .row .content h3{
+    font-size: 5rem;
+    color: #333;
+    text-align: left;
+
+
+}
+
+
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: rgba(0,0,0,.3);
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5rem   ;
+}
+
+
+.icons-container{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+.icons-container .icons{
+    background:black;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons img{
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3{
+    color: whitesmoke;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+
+}
+
+
+.icons-container .icons span{
+    color: whitesmoke;
+    padding-bottom: .5rem;
+    font-size: 1.3rem;
+    
+}
+
+```
+### Products.html
+```
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+   <section class="products" id="products">
+    <h1 class="heading"> latest <span>products</span> </h1> 
+
+    <div  class="box-container">
+        <div class="box">
+           <span class="discount"></span> 
+           <div class="image">
+            <img src="java script.jpeg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="cart-btn">add to cart</a>
+                <a href="#" class="fas fa-share"></a>
+            </div>
+           </div>
+           <div class="content">
+            <h3>The Complete JavaScript Course 2024: From Zero to Expert!</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+           </div>
+        </div>
+
+
+
+        <div class="box">
+            <span class="discount"></span> 
+            <div class="image">
+             <img src="learn python.png" alt="">
+             <div class="icons">
+                 <a href="#" class="fas fa-heart"></a>
+                 <a href="#" class="cart-btn">add to cart</a>
+                 <a href="#" class="fas fa-share"></a>
+             </div>
+            </div>
+            <div class="content">
+             <h3>The Complete Python Bootcamp From Zero to Hero in Python</h3>
+             <div class="price">$9.99 <span>$15.99</span></div>
+            </div>
+         </div>
+
+
+         <div class="box">
+            <span class="discount"></span> 
+            <div class="image">
+             <img src="c programming.jpg" alt="">
+             <div class="icons">
+                 <a href="#" class="fas fa-heart"></a>
+                 <a href="#" class="cart-btn">add to cart</a>
+                 <a href="#" class="fas fa-share"></a>
+             </div>
+            </div>
+            <div class="content">
+             <h3>C Programming For Beginners - Master the C Language</h3>
+             <div class="price">$11.99 <span>$19.99</span></div>
+            </div>
+         </div>
+
+         <div class="box">
+            <span class="discount"></span> 
+            <div class="image">
+             <img src="webdeveloper.jpg" alt="">
+             <div class="icons">
+                 <a href="#" class="fas fa-heart"></a>
+                 <a href="#" class="cart-btn">add to cart</a>
+                 <a href="#" class="fas fa-share"></a>
+             </div>
+            </div>
+            <div class="content">
+             <h3>The Web Developer Bootcamp 2023</h3>
+             <div class="price">$21.99 <span>$46.99</span></div>
+            </div>
+         </div>
+
+         <div class="box">
+            <span class="discount"></span> 
+            <div class="image">
+             <img src="ethical-hacking.png" alt="">
+             <div class="icons">
+                 <a href="#" class="fas fa-heart"></a>
+                 <a href="#" class="cart-btn">add to cart</a>
+                 <a href="#" class="fas fa-share"></a>
+             </div>
+            </div>
+            <div class="content">
+             <h3>Learn Ethical Hacking From Scratch</h3>
+             <div class="price">$15.99 <span>$32.99</span></div>
+            </div>
+         </div>
+
+
+
+         <div class="box">
+            <span class="discount"></span> 
+            <div class="image">
+             <img src="maxresdefault.jpg" alt="">
+             <div class="icons">
+                 <a href="#" class="fas fa-heart"></a>
+                 <a href="#" class="cart-btn">add to cart</a>
+                 <a href="#" class="fas fa-share"></a>
+             </div>
+            </div>
+            <div class="content">
+             <h3>Ultimate AWS Certified Developer Associate 2023 NEW DVA-C02
+            </h3>
+             <div class="price">$12.99 <span>$15.99</span></div>
+            </div>
+         </div>
+
+
+
+         <div class="box">
+            <span class="discount"></span> 
+            <div class="image">
+             <img src="ai.jpg" alt="">
+             <div class="icons">
+                 <a href="#" class="fas fa-heart"></a>
+                 <a href="#" class="cart-btn">add to cart</a>
+                 <a href="#" class="fas fa-share"></a>
+             </div>
+            </div>
+            <div class="content">
+             <h3>Artificial Intelligence A-Z 2023: Build 5 AI (incl. ChatGPT)</h3>
+             <div class="price">$12.99 <span>$15.99</span></div>
+            </div>
+         </div>
+
+
+         <div class="box">
+            <span class="discount"></span> 
+            <div class="image">
+             <img src="web design.jpg" alt="">
+             <div class="icons">
+                 <a href="#" class="fas fa-heart"></a>
+                 <a href="#" class="cart-btn">add to cart</a>
+                 <a href="#" class="fas fa-share"></a>
+             </div>
+            </div>
+            <div class="content">
+             <h3>Web Design for Beginners: Real World Coding in HTML & CSS</h3>
+             <div class="price">$0 <span>$15.99</span></div>
+            </div>
+         </div>
+    </div>
+</section>
+
+  </body>
+</html>
+
+```
+### Products.css
+```
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; ;
+}
+
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    position: relative;
+}
+
+.products .box-container .box .discount{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    padding:.7rem 1rem ;
+    font-size: 2rem;
+    color: var(--pink);
+    background: rgba(255, 51, 153, .05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+
+.products .box-container  .box  .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow:hidden ;
+
+
+
+}
+
+
+
+.products .box-container  .box  .image img{
+
+height: 25rem;
+
+
+}
+
+.products .box-container  .box:hover  .image img{
+
+    transform: scale(1.1);
+    }
+
+
+.products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem; left: 0; right: 0;
+    display: flex;
+}
+
+
+.products .box-container .box .image .icons a{
+     height: 5rem;
+     line-height: 5rem;
+     font-size: 2rem;
+     width: 50%;
+     background: var(--pink);
+     color: #fff;
+
+
+}
+
+.products .box-container .box:hover .image .icons{
+     bottom: 0;
+}
+
+
+
+
+
+.products .box-container .box .image .icons .cart-btn{
+
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+
+}
+
+.products .box-container .box .image .icons a:hover{
+    background: #333;
+
+}
+
+
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+
+}
+
+
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color: var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.products .box-container .box .content .price  span{
+    font-size: 1.5rem;
+    color: #999
+    font-weight: lighter;
+    text-decoration : line-through;
+}
+```
+### Review.html
+```
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+<section class="review" id="review">
+
+<h1 class="heading"> customer's <span>review</span>  </h1>
+
+<div class="box-container">
+
+<div class="box">
+
+<div class="stars">
+
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    
+
+
+</div>
+<p>CodeConnections fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes them available to customers. In total, it was a big success, I would get emails about what a fantastic resource it was. It’s truly the best solution for our employees and their careers.
+    There are some incredible courses on Udemy, particularly some of the bootcamp courses in software and web development that have been better than my expensive university education.  The great thing is you can focus on learning the skills you actually enjoy doing.
+</p>
+<div class="user">
+<img src="varun.jpeg"  alt="">
+
+<div class="user-info">
+    <h3>Varun Patil</h3>
+    <span>Senior Manager HR </span>
+</div>
+
+</div>
+
+<span class="fas fa-quote-right"></span>
+</div>
+
+
+
+
+
+<div class="box">
+
+    <div class="stars">
+    
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    
+    
+    </div>
+    <p>I have purchased a couple of the courses from CodeConnections during this last year and have had no issue’s at all. The course’s has been easily accessed and the content excellent.
+        I can highly recommend this company to meet your needs.
+        I honestly have no idea why there are so many negative comments.I have completed a few specific courses and I am very satisfied with the teachers and content.Easy to use, great courses.You get what you pay for.I am impressed and keep impressing.My main reason for enrolling is to further my own knowledge. CodeConnections!!
+    
+    </p>
+    <div class="user">
+    <img src="QWERTY.jpg"  alt="">
+    
+    <div class="user-info">
+        <h3>Alfred Riche</h3>
+        <span>Executive Manager</span>
+    </div>
+    
+    </div>
+    
+    <span class="fas fa-quote-right"></span>
+    </div>
+
+
+
+
+
+
+
+    <div class="box">
+
+        <div class="stars">
+        
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        
+        
+        </div>
+        <p>"A WEB LEARNING BOOK"
+            a sincere thanks to this learning site... from a free learning session to , with certificates . listening, reading and understanding will never be boring. i highly recommend these topics
+            *energy protection and boundaries>
+            *how to speak to anyone and be fearless>.I love the selection of classes and the instructors often update their courses. Some instructors are better than others, but that's to be expected.Don't understand why it has a low rating.Looking forward to taking more courses. CodeConnections rocks!!</p>
+        <div class="user">
+        <img src="download.jpeg"  alt="">
+        
+        <div class="user-info">
+            <h3>Luz Romero</h3>
+            <span>Developer</span>
+        </div>
+        
+        </div>
+        
+        <span class="fas fa-quote-right"></span>
+        </div>
+
+
+
+        <div class="box">
+
+            <div class="stars">
+            
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            
+            
+            </div>
+            <p>I don`t understand why the website have so many bad reviews. I have used Udemy for the past few years and what I can say is that the company have very good courses for the price. This website is not to get a qualification but upgrading your skills. I bought courses at a great discount. I recommend every user to check first the rating of the teachers before buying the course and also to wait when the discount windows are open to get the courses at a very low price. Recommend the platform.Some Instructors Are Better Than Others, But That's Expected</p>
+            <div class="user">
+            <img src="nick.webp"  alt="">
+            
+            <div class="user-info">
+                <h3>Christy Nick</h3>
+                <span>happy customer</span>
+            </div>
+            
+            </div>
+            
+            <span class="fas fa-quote-right"></span>
+            </div>
+
+
+
+
+
+            <div class="box">
+
+                <div class="stars">
+                
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+    
+                
+                
                 </div>
-                <div class="itemname">Coffee powder</div>
-                <div class="itemprice">Price: Rs.200</div>
-            </div>
-              <div class="productitem"> 
-              <div class="itemimage">
-              <img src="/static/img/charlesdeluvio-1-nx1QR5dTE-unsplash.jpg"  alt="product image">
-              </div>
-              <div class="itemname">Rounded SunGlasses</div>
-              <div class="itemprice">Price: Rs.1,500</div>
-              </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/daniel-korpai-hbTKIbuMmBI-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">Smart Watch</div>
-            <div class="itemprice">Price: Rs.2,500</div>
-          </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/jakob-owens-O_bhy3TnSYU-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">Travel Bag</div>
-            <div class="itemprice">Price: Rs.2,000</div>
-          </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/joan-tran-reEySFadyJQ-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">Thermo bottle</div>
-            <div class="itemprice">Price: Rs.700</div>
-          </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/kiran-ck-LSNJ-pltdu8-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">ANC HeadPhones</div>
-            <div class="itemprice">Price: Rs.2,700</div>
-          </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/kuiye-chen-NuOGFo4PudE-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">Earpodes</div>
-            <div class="itemprice">Price: Rs.1,700</div>
-          </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/ruslan-bardash-4kTbAMRAHtQ-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">Table Chair</div>
-            <div class="itemprice">Price: Rs.1,245</div>
-          </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/mike-meyers-v8XaVfyo41Q-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">Retro GameStation</div>
-            <div class="itemprice">Price: Rs.3,500</div>
-          </div>
-          <div class="productitem"> 
-            <div class="itemimage">
-            <img src="/static/img/oscar-ivan-esquivel-arteaga-ZtxED1cpB1E-unsplash.jpg"  alt="product image">
-            </div>
-            <div class="itemname">Keyboard Wireless Mouse</div>
-            <div class="itemprice">Price: Rs.800</div>
-          </div>
-          </div>
-          </div>        
-      </div>
-      <div class="footer">
-        Copyright &#169; 2021 DailyObjects Private Limited, Developed by Nijeesh NJ.
-      </div>
-    </div>
-  </body>
-</html>
+                <p>Great platform and educators. The value of the courses are okay in my opinion. Way less than going back to in person school and convinient.
 
-```
-### people.html
-```HTML
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>DailyObjects</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="banner"><b>DailyObjects LIMITED.</b></div>
-      <div class="menu">
-        <div class="menuitem"><a href="/static/home.html"><b>Home</b></a></div>
-        <div class="menuitem"><a href="/static/products.html"><b>Products</b></a></div>
-        <div class="menuitemselected"><a href="/static/people.html"><b>People</b></a></div>
-        <div class="menuitem"><a href="/static/contact.html"><b>Contact Us</b></a></div>
-      </div>
-      <body>
-          <div class="content">
-              <h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Our Proud Management Crew!!!</h2>
-              <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/pexels-andrea-piacquadio-733872.jpg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Emma (Chairman)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/pexels-andrea-piacquadio-774909.jpg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Charoline(Head Executive)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/pexels-daniel-xavier-1239291.jpg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Sophia (Head Executive)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/pexels-hannah-nelson-1065084.jpg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Juliet(Manager)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/pexels-justin-shaifer-1222271.jpg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                    Maddy Nelson (Manager)</h2></centre>
-                  <centre>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  <img src="/static/img/pexels-pixabay-220453.jpg" height="500" width="500"><br><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                  Max Mysterio (Deputy Manager)</h2></centre>
-      </div>
-      <div class="footer">
-        Copyright &#169; 2021 DailyObjects Private Limited, Developed by Nijeesh NJ.
-      </div>
-    </div>
-  </body>
-</html>
-```
-### contact.html
-```HTML
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>DailyObjects Limited</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="icon" href="./img/icon.png" type="image/x-icon" />
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="banner"><b>DailyObjects LIMITED.</b></div>
-      <div class="menu">
-        <div class="menuitem"><a href="/static/home.html"><b>Home</b></a></div>
-        <div class="menuitem"><a href="/static/products.html"><b>Products</b></a></div>
-        <div class="menuitem"><a href="/static/people.html"><b>People</b></a></div>
-        <div class="menuitemselected"><a href="/static/contact.html"><b>Contact Us</b></a></div>
-      </div>
-      <body>
-          <div class="content">
-          <h1>&ensp;Contact Information</h1>
-                    <p><b>&emsp;Here are the details listed below. Do contact us for any need</b></p>
-                    <p><b>&emsp;&ensp;Address:</b>
-                         No:98, king street, Flyer Town, Texas, United States
+                    I had taken 3 different courses by 3 different teachers so far, and their curriculum are way better that what I expected. I even had questions after the class and the teacher was responsive and explained to me further about the topic I didn't understand. I get that it's not for everyone, you need to have a lot of discipline to be self-taught, and I think Udemy does a great job making it more accessible.
+                    I Bought Courses At A Great Discount.
                     </p>
-                    <ul>
-                        <br>
-                        <li><b>&emsp;Phone:</b>&emsp;2387459648</li>
-                        <br>
-                        <li><b>&emsp;Shop owner no</b>:&emsp;9586456745</li>
-                        <br>
-                        <li><b>&emsp;Shop Manager Number:</b> 8975455185</li>
-                        <br>
-                        <li><b>&emsp;Email Id:</b>&emsp;royalreader74@gmail.com</li>
-                        <br>
-                        <li><b>&emsp;Alternate Email Id:</b>&emsp;royalreader89@gmail.com</li>
-                        <br>
-                    </ul>
+                <div class="user">
+                <img src="SANDEEP.jpg"  alt="">
+                
+                <div class="user-info">
+                    <h3>Sandeep </h3>
+                    <span>Freelancer</span>
                 </div>
-          </div>
-          </div>
-      </div>
-      <div class="footer">
-        Copyright &#169; 2021 DailyObjects Private Limited, Developed by Nijeesh NJ.
-      </div>
-    </div>
-  </body>
+                
+                </div>
+                
+                <span class="fas fa-quote-right"></span>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="box">
+
+                    <div class="stars">
+                    
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    
+                    
+                    </div>
+                    <p>I have been a long-time learner with Udemy and it's served me well. Whenever I feel like I want to learn something new, I always check their site. Not only do they run frequent sales which make the courses more affordable, but they have a great variety. I also love the feedback from instructors. It's helpful to have some guidance if you need it. Currently learning belly dance and Pilates.</p>
+                    <div class="user">
+                    <img src="profile.png"  alt="">
+                    
+                    <div class="user-info">
+                        <h3>Saravanan</h3>
+                        <span>Student </span>
+                    </div>
+                    
+                    </div>
+                    
+                    <span class="fas fa-quote-right"></span>
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="stars">
+                        
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                        
+                        
+                        </div>
+                        <p>The fading star
+                            Not only the quality of the courses dropped but also the instructors become very rude and disrespectful.
+                            
+                            Unfortunately, the legendary tutors there either left CodeConnections and joined other learning websites. I say it's time to leave Udemy wish I could refund all the new courses I got recently.
+                            CodeConnections lost a customer forever. I am done with them. They are definitely running a scam there.
+                            </p>
+                        <div class="user">
+                        <img src="profile.png"  alt="">
+                        
+                        <div class="user-info">
+                            <h3>Shabaz ahmed</h3>
+                            <span>Educator</span>
+                        </div>
+                        
+                        </div>
+                        
+                        <span class="fas fa-quote-right"></span>
+                        </div>
+
+
+
+
+
+
+
+        <div class="box">
+
+            <div class="stars">
+            
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            
+            
+            </div>
+            <p>The courses overall are varied in quality and the user needs to do a bit of research before purchasing. I've had a good experience with 2 courses on CodeConnections itself.
+
+                Make sure you the time to go through any demo content provided for the course.
+                C'mon!! I'd give it more stars, but they only give you 5.Cheap courses, no monthly fees.Just everything in one nice little place. Plus you get certifiacates of completion</p>
+            <div class="user">
+            <img src="sandeep.jpeg"  alt="">
+            
+            <div class="user-info">
+                <h3>john doe</h3>
+                <span>happy customer</span>
+            </div>
+            
+            </div>
+            
+            <span class="fas fa-quote-right"></span>
+            </div>
+
+</div>
+
+</section>
+</body>
 </html>
+```
+### Review.css
+```
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.review .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    border: .1rem solid rgba(0,0,0,.1);
+
+}
+
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom: 3rem; right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+
+
+
+}
+
+
+.review .box-container .box .stars i{
+       color: var(--pink);
+       font-size: 2rem;
+}
+
+
+.review .box-container .box p{
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+
+
+
+
+
+.review .box-container .box .user{
+           display: flex;
+           align-items: center;
+           padding-top: 2rem;
+
+
+}
+
+
+.review .box-container .box .user img{
+     height: 6rem;
+     width: 6rem;
+     border-radius: 50%;
+     object-fit: cover;
+     margin-right: 1rem;
+
+
+}
+
+
+
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color: #333;
+}
+
+.review .box-container .box .user span{
+    font-size: 1.5rem;
+    color: #333;
+}
+```
+### Contact.html
+```
+  <!DOCTYPE html>
+<html lang="en">
+  <body>
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span> contact </span> us </h1>
+    <div class="row">
+        <form action="">
+            <input type="text" class="box" placeholder="name">
+            <input type="email" class="box" placeholder="email">
+            <input type="number" class="box" placeholder="number">
+            <textarea name="" class="box" placeholder="message"  cols="30"  rows="10" ></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form> 
+
+    <div class="image">
+        <img style="width: 250px;height: 250px;"   src="pic 31.jpg" alt="">
+        <h3>Saravanan</h3>
+    </div>
+
+
+    </div>
+    
+</section>
+
+
+
+<section class="footer">
+
+     <div class="box-container">
+
+           <div class="box">
+
+                 <h3>quick links</h3>
+                 <a href="#">home</a>
+                 <a href="#">about</a>
+                 <a href="#">products</a>
+                 <a href="#">review</a>
+                 <a href="#">contact</a>
+           </div>
+
+
+
+           <div class="box">
+
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorite</a>
+
+      </div>
+
+      <div class="box">
+
+        <h3>locations</h3>
+        <a href="#">india</a>
+        <a href="#">USA</a>
+        <a href="#">japan</a>
+        <a href="#">france</a>
+  </div>
+
+  <div class="box">
+
+    <h3>contact info</h3>
+    <a href="#">+91-7694833736</a>
+    <a href="#">CodeConnections/query/portal.org</a>
+    <a href="#">mumbai , india -400001</a>
+    
+</div>
+
+
+     </div>
+
+
+<div class="credit"> created by <span> mr Saravanan </span> all rights reserved </div>
+
+
+
+
+</section>
+
+
+</body>
+</html>
+
+```
+### Contact.css
+```
+.contact .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+
+}
+
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: 1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+
+.contact .row image{
+    flex: 1 1 40rem;
+}
+
+.contact .row image img{
+    width: 100%;
+}
+
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem ;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.contact .row form .box:focus{
+    border-color: var(--pink);
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color: #666;
+    padding:1rem 0;
+    text-align: center;
+}
+
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+
+}
+
+
+.footer .box-container .box  img{
+
+    margin-top: 1rem;
+    size-adjust: 50%;
+    height: 145px;
+    width: 130px;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:1.5rem ;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: .1rem solid rgba(0,0,0,.1);
+}
+
+
+.footer .credit span{
+
+    color: var(--pink);
+    
+}
+
+
+h3{
+    font-size: 3rem;
+    text-align: center;
+    font-family: Arial;
+}
+
+
 
 ```
 ## OUTPUT:
 
 ### Home Page:
-![Screenshot from 2023-12-14 18-44-59](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/a2ee9411-0a53-4b79-a0b2-dd68db5b878f)
+![Screenshot 2023-12-24 131401](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/634699df-9565-4f5d-8536-0dd58eb6ef23)
+
+
+### About Page:
+![Screenshot 2023-12-24 131502](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/76493913-1fbd-4e7e-91b0-ee9b1c7f217d)
+
+
 
 ### Product Page:
-![Screenshot from 2023-12-14 18-45-11](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/01e61793-72e5-4f1a-bc8c-71d8bc57b715)
-![Screenshot from 2023-12-14 18-45-19](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/621d7597-23af-47f6-90b0-7ec25e110403)
+
+![Screenshot 2023-12-24 131619](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/806de6b5-915a-49d6-842c-2e8cf6efc614)
+![Screenshot 2023-12-24 131643](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/12032b5c-d81e-45b5-8757-d8c824fd2792)
 
 
-### People Page:
-![Screenshot from 2023-12-14 18-45-31](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/3e84bb54-cd7d-464a-8a06-63900a5ccc99)
-![Screenshot from 2023-12-14 18-45-37](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/91e99e9d-ebbf-493f-ab59-220b82452add)
-![Screenshot from 2023-12-14 18-45-43](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/45842632-2372-4767-ae6c-8f5478064a2e)
 
+
+### Review Page:
+![Screenshot 2023-12-24 131711](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/20e17b71-c96d-4e8f-a89c-8710bb238dc5)
 
 ### Contact Page:
-![Screenshot from 2023-12-14 18-45-55](https://github.com/Nijeesh-bit/productcompanywebsite/assets/89188014/7b78f019-3791-4998-8eba-0ecd70e123d6)
-
+![Screenshot 2023-12-24 132044](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/f94aa0f7-cca5-463f-bd10-6ee71853ff34)
 ## Result:
 
 Thus a website is designed for the software product company and the HTML,CSS code are validated.
