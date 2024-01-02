@@ -790,10 +790,6 @@ height: 25rem;
             <span class="fas fa-quote-right"></span>
             </div>
 
-
-
-
-
             <div class="box">
 
                 <div class="stars">
@@ -1224,9 +1220,7 @@ h3{
 ![Screenshot 2023-12-24 131502](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/76493913-1fbd-4e7e-91b0-ee9b1c7f217d)
 
 
-
 ### Product Page:
-
 ![Screenshot 2023-12-24 131619](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/806de6b5-915a-49d6-842c-2e8cf6efc614)
 ![Screenshot 2023-12-24 131643](https://github.com/SaravananPV3010/productcompanywebsite/assets/139754526/12032b5c-d81e-45b5-8757-d8c824fd2792)
 
