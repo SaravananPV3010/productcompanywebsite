@@ -3,7 +3,6 @@
 To design a static website for a software product company company.
 
 ## DESIGN STEPS:
-
 ### Step 1:
 
 Requirement collection.
